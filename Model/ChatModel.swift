@@ -36,7 +36,7 @@ class ChatModel: NSObject {
         var writeStream: Unmanaged<CFWriteStream>?
 
         // Local IP Address 
-        CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, "192.168.0.13" as CFString, 2223, &readStream, &writeStream)
+        CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, "192.168.0.18" as CFString, 2223, &readStream, &writeStream)
         
         inputStream = readStream!.takeRetainedValue()
         outputStream = writeStream!.takeRetainedValue()

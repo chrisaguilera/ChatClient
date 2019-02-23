@@ -41,7 +41,7 @@ class ChatViewController: UIViewController {
             let messageInputViewHeight = self.messageInputView.bounds.height
             let point = CGPoint(x: self.messageInputView.center.x, y: endFrame.origin.y - messageInputViewHeight/2.0)
             
-            let inset = UIEdgeInsets(top: 0, left: 0, bottom: endFrame.size.height, right: 0)
+            let inset = UIEdgeInsets(top: 0, left: 0, bottom: endFrame.size.height + messageInputViewHeight/2.0, right: 0)
             
             UIView.animate(withDuration: 0.25) {
                 self.messageInputView.center = point
@@ -68,7 +68,6 @@ class ChatViewController: UIViewController {
         
         view.addSubview(tableView)
         view.addSubview(messageInputView)
-        
     }
     
     override func viewDidLayoutSubviews() {

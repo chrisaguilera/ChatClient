@@ -52,6 +52,8 @@ class MessageInputView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        textView.font = UIFont(name: "Helvetica", size: 17)
+        
         let size = bounds.size
         textView.bounds = CGRect(x: 0, y: 0, width: size.width - 32 - 8 - 60, height: 40)
         sendButton.bounds = CGRect(x: 0, y: 0, width: 60, height: 44)
